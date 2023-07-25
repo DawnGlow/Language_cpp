@@ -35,6 +35,6 @@ int main() {
     Color blue(0, 0, 1);
     Color red(1, 0, 0);
     // Color purple = MixColors(blue, red);
-    Color purple = Color::MixColors(blue, red);
+    Color purple = Color::MixColors(blue, red); // 매개변수가 Color 타입이기 때문에 정적 메소드로 선언할 시 접근 용이.
     cout << "r = " << purple.GetR() << " g = " << purple.GetG() << " b = " << purple.GetB() << '\n';
 }

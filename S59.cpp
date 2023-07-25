@@ -31,6 +31,8 @@ class Color {
 };
 
 int Color::idcounter = 1;
+// 예를 들어 item의 idcounter가 있다면
+// int Item::idcounter = 1;을 따로 선언해서 변수끼리 헷갈림을 방지할 수 있다.
 
 /*
 Color MixColors(Color a, Color b) {  // 컬러랑 밀접한 관계라서 컬러 멤버에 함수를 넣고 싶음.
