@@ -100,7 +100,7 @@ int main(void) {
     /*
     operator=에 rvalue를 매개변수로 갖는 연산자 오버로딩을 하자.
     */
-    String &&r = getName();  // 임시객체 반환
+    String &&r = getName();  // 임시객체 반환, &&r은 r-value 참조자이다. 
     cout << "===== 4 =====" << '\n';
 }
 // r-value(등호에 우변에만 올 수 있는 값)

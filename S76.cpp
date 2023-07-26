@@ -1,6 +1,6 @@
 // 상속이 필요한 이유
 // 메신저 앱 : 텍스트, 이미지
-
+// 상속을 사용하지 않은 코드
 #include <iostream>
 #include <string>
 

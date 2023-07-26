@@ -7,7 +7,7 @@ using namespace std;
 
 class Item {
    public:
-    Item(int num) : num(num) {  // 변환 생성자
+    Item(int num) : num(num) {  // 변환 생성자 // explicit Item(int num) : 명시적으로만 가능하게
         cout << "Item(int)" << '\n';
     }
     Item(string name) : name(name) {  // 변환 생성자
@@ -18,11 +18,11 @@ class Item {
     }
 
     // Item -> int 형변환 연산자 오버로딩
-    operator int() const {
+    operator int() const { // explicit operator int() : 명시적으로만 가능하게
         return num;
     }
     // Item -> string
-    operator string() const {
+    explicit operator string() const {
         return to_string(num) + " : " + name;
     }
 
