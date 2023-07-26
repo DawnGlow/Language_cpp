@@ -83,5 +83,5 @@ int main() {
     cout << s1.GetStrData() << '\n';
     cout << s2.GetStrData() << '\n';
     cout << s3.GetStrData() << '\n';
-    cout << s4.GetStrData() << '\n';  // 쓰레기값 출력
+    cout << s4.GetStrData() << '\n';  // 예외처리 안하면 쓰레기값 출력
 }

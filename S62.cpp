@@ -42,23 +42,23 @@ Vector2::Vector2(float x, float y) : x(x), y(y) {}
 float Vector2::GetX() const { return x; }
 float Vector2::GetY() const { return y; }
 // 비 멤버연산자
-Vector2 operator*(const float a, const Vector2 b) {
-    return Vector2(a * b.GetX(), a * b.GetY());  // 전역함수라 get 함수 사용.
+Vector2 operator*(const float a, const Vector2 b) {  // ex) 1,6 * Vector2typeclass
+    return Vector2(a * b.GetX(), a * b.GetY());      // 전역함수라 get 함수 사용.
 }
-
+// 멤버연산자
 Vector2 Vector2::operator+(const Vector2 rhs) const {
     return Vector2(x + rhs.x, y + rhs.y);
 }
 Vector2 Vector2::operator-(const Vector2 rhs) const {
     return Vector2(x - rhs.x, y - rhs.y);
 }
-Vector2 Vector2::operator*(const float rhs) const {
+Vector2 Vector2::operator*(const float rhs) const {  // ex) Vector2typeclass * 1.6
     return Vector2(x * rhs, y * rhs);
 }
 Vector2 Vector2::operator/(const float rhs) const {
     return Vector2(x / rhs, y / rhs);
 }
-float Vector2::operator*(const Vector2 rhs) const {
+float Vector2::operator*(const Vector2 rhs) const {  // Vector의 내적. Vector 각 성분끼리 곱의 합.
     return x * rhs.x + y * rhs.y;
 }
 
