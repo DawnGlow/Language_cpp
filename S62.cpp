@@ -19,7 +19,6 @@ class Vector2 {
     float GetY() const;
 
     // 멤버 연산자
-    // 문제점 1. 선언 정리 분리 안됨 / 2. const 사용하고 싶음 / 3, 매개변수도 const
     Vector2 operator+(Vector2 rhs) const;      // 프로토타입
     Vector2 operator-(Vector2 rhs) const;      // 프로토타입
     Vector2 operator*(const float rhs) const;  // 프로토타입(벡터에 실수 곱하는 함수)
@@ -41,10 +40,12 @@ Vector2::Vector2(float x, float y) : x(x), y(y) {}
 
 float Vector2::GetX() const { return x; }
 float Vector2::GetY() const { return y; }
+
 // 비 멤버연산자
 Vector2 operator*(const float a, const Vector2 b) {  // ex) 1,6 * Vector2typeclass
     return Vector2(a * b.GetX(), a * b.GetY());      // 전역함수라 get 함수 사용.
 }
+
 // 멤버연산자
 Vector2 Vector2::operator+(const Vector2 rhs) const {
     return Vector2(x + rhs.x, y + rhs.y);

@@ -7,7 +7,7 @@ class MyClass {
     void PrintThis() {  // 보이지 않는 매개변수로 this를 항상 가지고 있다.
         cout << "나의 주소는 " << this << " 입니다." << endl;
     }
-    void PrintThis2(MyClass *ptr) {
+    void PrintThis2(MyClass *ptr) {  // MyClass 객체 b에서 printthis2를 수행하면 b의 주소가 매개변수로 넘어가 실행되는 것을 표현한 함수
         cout << "나의 주소는 " << ptr << " 입니다." << endl;
     }
 };
